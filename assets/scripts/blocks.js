@@ -11,7 +11,6 @@ Blockly.Blocks["example_input_text"] = {
   init: function () {
     this.appendDummyInput()
       .appendField("Ask me a question:")
-      
       .appendField(new Blockly.FieldDropdown([["What is the date today?", "27th August 2019"], ["What is the time now?","12:30 PM"], ["How are you?","I am Fine."], ["What is Javascript?", "Javascript is a programming language for web."], ["What is your name?", "My name is CuriousJr."]]), "input");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -58,4 +57,5 @@ function runcode() {
 function reset() {
   delete inputTextValue;
   redrawUi();
+  location.reload();
 }
